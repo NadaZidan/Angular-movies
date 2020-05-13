@@ -1,0 +1,42 @@
+
+<div class="test"></div>
+
+
+<div class="py-5">
+    <input  [(ngModel)]= 'term' class="form-control w-50 m-auto">
+</div>
+
+<div class="row">
+    <div class="col-md-4 py-5">
+
+        <div class="brdr w-25"></div>
+        <h2 class="text-white py-3">All movies, TV shows and people <br/> Right Now</h2>
+        <p class="text-muted">Most Trending  this Month</p>
+        <div class="brdr w-100"></div>
+
+    </div>
+    
+
+    <div *ngFor="let movies of trendingAll|search:term ; let i=index"class="col-md-2 my-2">
+        <div class="movies position-relative">
+        <img  class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movies.poster_path}}" />
+
+        <h6 class="text-white text-center">{{movies.title == undefined ? movies.name:movies.title}}</h6>
+        <div class="brdr w-100 "></div>
+        <a [routerLink]='["/moviedetails", i]'>
+        <a href="#">see more</a>
+         </a>
+        <div class="vote">{{movies.vote_average}}</div>
+        <div class="vote1">{{movies.original_language}}</div>
+
+    </div>
+</div>
+<div>
+    <div  class="w-50 mx-auto my-5 py-5 d-flex">
+        <i (click)='prev()' class="fas text-white fa-2x fa-arrow-alt-circle-left"></i>
+        <div class="p-3 text-white " *ngFor='let pageNum of pageNum'(click)='changePage(pageNum)' >{{pageNum}}</div>
+        <i (click)='next()'class="fas text-white fa-2x fa-arrow-alt-circle-right"></i>
+
+    
+    </div>
+</div>

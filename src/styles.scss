@@ -1,0 +1,63 @@
+$fontFamily:'Montserrat', sans-serif;
+$borderHeight:1px;
+$mainWidth:400px;
+$fontSize:16px;
+$bgColor:#131722;
+$lightBgColor:#e71414;
+$darkBgColor:#0da1b4;
+
+$bgTransparent:rgba(36,186,239,.6) ;
+$fontColor:#fff;
+$borderColor:#e9d5d5e7;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+*{
+    cursor: pointer;
+}
+html,body
+{
+    height: 100%;
+}
+body
+{
+    margin: 0;
+    background-color: $bgColor;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+}
+a
+{
+    color: $fontColor;
+    text-decoration: none;
+}
+
+
+
+.vote{
+    background-color: $lightBgColor;
+    color: $fontColor;
+    padding: 8px;
+    font-weight: 500;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.vote1{
+    background-color: $darkBgColor;
+    color: $fontColor;
+    padding: 8px;
+    font-weight:500;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+.brdr
+{
+    height: $borderHeight;
+    background-color: $borderColor;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
